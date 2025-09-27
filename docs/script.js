@@ -1,5 +1,9 @@
 // Navigation and Interactive Elements
 document.addEventListener('DOMContentLoaded', function() {
+    // Add cache-busting timestamp to prevent caching issues
+    const cacheBuster = Date.now();
+    console.log('MochiDrop Documentation loaded at:', new Date().toISOString(), 'Cache buster:', cacheBuster);
+    
     // Navigation functionality
     const navLinks = document.querySelectorAll('.nav-link');
     const contentSections = document.querySelectorAll('.content-section');
