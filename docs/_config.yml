@@ -1,0 +1,60 @@
+# Site settings
+title: "MochiDrop Documentation"
+description: "Complete guide for MochiDrop - Advanced Solana Airdrop Bot"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Include files
+include:
+  - _pages
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+author: MochiDrop Team
+twitter:
+  username: mochidrop
+  card: summary_large_image
+
+social:
+  name: MochiDrop
+  links:
+    - https://github.com/mochidrop
+
+# GitHub Pages specific settings
+github:
+  repository_name: mochidrop-docs

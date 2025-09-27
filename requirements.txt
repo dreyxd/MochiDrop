@@ -1,0 +1,14 @@
+# Core dependencies
+python-telegram-bot==20.7
+python-dotenv==1.0.0
+asyncpg==0.29.0
+cryptography==41.0.7
+
+# Solana dependencies
+solana==0.30.2
+solders==0.18.1
+base58==2.1.1
+
+# Additional utilities
+aiofiles==23.2.1
+pydantic==2.5.0

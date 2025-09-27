@@ -1,0 +1,960 @@
+---
+layout: default
+title: MochiDrop Documentation
+description: Complete guide for MochiDrop - Advanced Solana Airdrop Bot with role-based access control
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MochiDrop Documentation - Solana Airdrop Bot</title>
+    <meta name="description" content="Complete guide for MochiDrop - Advanced Solana Airdrop Bot with role-based access control">
+    <meta name="author" content="MochiDrop Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MochiDrop Documentation">
+    <meta property="og:description" content="Complete guide for MochiDrop - Advanced Solana Airdrop Bot">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="MochiDrop Documentation">
+    <meta property="twitter:description" content="Complete guide for MochiDrop - Advanced Solana Airdrop Bot">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-circle" style="color: #ff6b9d;"></i>
+                    <span>MochiDrop Docs</span>
+                </div>
+            </div>
+            
+            <div class="nav-section">
+                <h3>GET STARTED</h3>
+                <ul>
+                    <li><a href="#welcome" class="nav-link active">Welcome to MochiDrop</a></li>
+                    <li><a href="#quick-start" class="nav-link">Quick Start</a></li>
+                    <li><a href="#features" class="nav-link">Features Overview</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h3>USER GUIDE</h3>
+                <ul>
+                    <li><a href="#registration" class="nav-link">Registration</a></li>
+                    <li><a href="#wallet-setup" class="nav-link">Wallet Setup</a></li>
+                    <li><a href="#claiming-airdrops" class="nav-link">Claiming Airdrops</a></li>
+                    <li><a href="#user-commands" class="nav-link">User Commands</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h3>ADMIN GUIDE</h3>
+                <ul>
+                    <li><a href="#admin-setup" class="nav-link">Admin Setup</a></li>
+                    <li><a href="#creating-airdrops" class="nav-link">Creating Airdrops</a></li>
+                    <li><a href="#wallet-management" class="nav-link">Wallet Management</a></li>
+                    <li><a href="#admin-commands" class="nav-link">Admin Commands</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h3>TECHNICAL</h3>
+                <ul>
+                    <li><a href="#installation" class="nav-link">Installation</a></li>
+                    <li><a href="#configuration" class="nav-link">Configuration</a></li>
+                    <li><a href="#database" class="nav-link">Database Schema</a></li>
+                    <li><a href="#api-reference" class="nav-link">API Reference</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h3>RESOURCES</h3>
+                <ul>
+                    <li><a href="#troubleshooting" class="nav-link">Troubleshooting</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#support" class="nav-link">Support</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Welcome Section -->
+                <section id="welcome" class="content-section active">
+                    <div class="hero">
+                        <div class="hero-content">
+                            <h1>🍡 Welcome to MochiDrop</h1>
+                            <p class="hero-subtitle">The most advanced Solana airdrop distribution bot for Telegram</p>
+                            <div class="hero-features">
+                                <div class="feature-badge">
+                                    <i class="fas fa-rocket"></i>
+                                    <span>Automated Distribution</span>
+                                </div>
+                                <div class="feature-badge">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Secure & Encrypted</span>
+                                </div>
+                                <div class="feature-badge">
+                                    <i class="fas fa-users"></i>
+                                    <span>Role-Based Access</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <div class="mochi-container">
+                                <div class="mochi-character">🍡</div>
+                                <div class="floating-coins">
+                                    <span class="coin">💰</span>
+                                    <span class="coin">💰</span>
+                                    <span class="coin">💰</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overview-grid">
+                        <div class="overview-card">
+                            <div class="card-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <h3>Easy Airdrop Claims</h3>
+                            <p>Users can browse and claim available airdrops with just a few clicks. Automated distribution ensures instant token delivery.</p>
+                        </div>
+                        <div class="overview-card">
+                            <div class="card-icon">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <h3>Admin Dashboard</h3>
+                            <p>Comprehensive admin interface for creating airdrops, managing wallets, and monitoring distribution analytics.</p>
+                        </div>
+                        <div class="overview-card">
+                            <div class="card-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>PostgreSQL Backend</h3>
+                            <p>Robust database system with user management, transaction tracking, and comprehensive logging.</p>
+                        </div>
+                        <div class="overview-card">
+                            <div class="card-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h3>Security First</h3>
+                            <p>Encrypted private key storage, role-based authentication, and secure transaction processing.</p>
+                        </div>
+                    </div>
+
+                    <div class="latest-updates">
+                        <h2>🚀 Latest Updates</h2>
+                        <div class="update-item">
+                            <div class="update-badge">NEW</div>
+                            <div class="update-content">
+                                <h4>Enhanced User Interface</h4>
+                                <p>Added cute mochi character to welcome messages and improved user experience with interactive buttons and cleaner navigation.</p>
+                            </div>
+                        </div>
+                        <div class="update-item">
+                            <div class="update-badge">IMPROVED</div>
+                            <div class="update-content">
+                                <h4>Advanced Wallet Management</h4>
+                                <p>Implemented encrypted wallet storage, batch token distribution, and comprehensive transaction tracking for admins.</p>
+                            </div>
+                        </div>
+                        <div class="update-item">
+                            <div class="update-badge">FEATURE</div>
+                            <div class="update-content">
+                                <h4>Role-Based Access Control</h4>
+                                <p>Complete separation between user and admin functionalities with secure authentication and authorization.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Start Section -->
+                <section id="quick-start" class="content-section">
+                    <h1>⚡ Quick Start Guide</h1>
+                    <p class="section-subtitle">Get MochiDrop up and running in minutes</p>
+
+                    <div class="steps-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Clone & Install</h3>
+                                <div class="code-block">
+                                    <pre><code>git clone https://github.com/yourusername/mochidrop.git
+cd mochidrop
+pip install -r requirements.txt</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Configure Environment</h3>
+                                <div class="code-block">
+                                    <pre><code>cp .env.example .env
+# Edit .env with your configuration</code></pre>
+                                </div>
+                                <p>Set up your Telegram bot token, database URL, and Solana configuration.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Initialize Database</h3>
+                                <div class="code-block">
+                                    <pre><code>psql -U your_user -d your_database -f database_schema.sql</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Run the Bot</h3>
+                                <div class="code-block">
+                                    <pre><code>python bot.py</code></pre>
+                                </div>
+                                <p>Your MochiDrop bot is now live and ready to distribute airdrops!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-links">
+                        <h3>🔗 Quick Links</h3>
+                        <div class="link-grid">
+                            <a href="#configuration" class="quick-link">
+                                <i class="fas fa-cog"></i>
+                                <span>Configuration Guide</span>
+                            </a>
+                            <a href="#user-commands" class="quick-link">
+                                <i class="fas fa-terminal"></i>
+                                <span>User Commands</span>
+                            </a>
+                            <a href="#admin-commands" class="quick-link">
+                                <i class="fas fa-crown"></i>
+                                <span>Admin Commands</span>
+                            </a>
+                            <a href="#troubleshooting" class="quick-link">
+                                <i class="fas fa-question-circle"></i>
+                                <span>Troubleshooting</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Section -->
+                <section id="features" class="content-section">
+                    <h1>✨ Features Overview</h1>
+                    <p class="section-subtitle">Comprehensive airdrop management system</p>
+
+                    <div class="feature-categories">
+                        <div class="feature-category">
+                            <h2>👥 User Features</h2>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-user-plus"></i>
+                                    <div>
+                                        <h4>Easy Registration</h4>
+                                        <p>Simple wallet registration with Solana address validation</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-search"></i>
+                                    <div>
+                                        <h4>Browse Airdrops</h4>
+                                        <p>Discover available airdrops with detailed information</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-mouse-pointer"></i>
+                                    <div>
+                                        <h4>One-Click Claims</h4>
+                                        <p>Claim airdrops instantly with automated distribution</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-history"></i>
+                                    <div>
+                                        <h4>Claim History</h4>
+                                        <p>Track all your claimed airdrops and transaction status</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-category">
+                            <h2>👑 Admin Features</h2>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <div>
+                                        <h4>Airdrop Creation</h4>
+                                        <p>Multi-step conversation flow for creating new airdrops</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-wallet"></i>
+                                    <div>
+                                        <h4>Wallet Management</h4>
+                                        <p>Encrypted wallet storage and batch token distribution</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <div>
+                                        <h4>Analytics Dashboard</h4>
+                                        <p>Comprehensive statistics and distribution analytics</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-users-cog"></i>
+                                    <div>
+                                        <h4>User Management</h4>
+                                        <p>View and manage registered users and their activities</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-category">
+                            <h2>🔧 Technical Features</h2>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-database"></i>
+                                    <div>
+                                        <h4>PostgreSQL Database</h4>
+                                        <p>Robust data storage with comprehensive schema</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <div>
+                                        <h4>Security & Encryption</h4>
+                                        <p>Encrypted private keys and secure authentication</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-sync-alt"></i>
+                                    <div>
+                                        <h4>Async Processing</h4>
+                                        <p>High-performance async/await architecture</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-bug"></i>
+                                    <div>
+                                        <h4>Error Handling</h4>
+                                        <p>Comprehensive error handling and logging</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- More sections will be added here -->
+                
+                <!-- Registration Section -->
+                <section id="registration" class="content-section">
+                    <h1>👥 User Registration</h1>
+                    <p class="section-subtitle">How users can register and get started with MochiDrop</p>
+
+                    <div class="registration-flow">
+                        <div class="flow-step">
+                            <div class="step-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="step-details">
+                                <h3>Start the Bot</h3>
+                                <p>Users begin by sending <code>/start</code> to the MochiDrop bot on Telegram.</p>
+                                <div class="code-block">
+                                    <pre><code>/start</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flow-step">
+                            <div class="step-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="step-details">
+                                <h3>Automatic Registration</h3>
+                                <p>The bot automatically creates a user profile with their Telegram information.</p>
+                                <ul class="feature-list-simple">
+                                    <li>Telegram ID stored securely</li>
+                                    <li>Username and first name captured</li>
+                                    <li>Role set to 'receiver' by default</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flow-step">
+                            <div class="step-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="step-details">
+                                <h3>Wallet Registration</h3>
+                                <p>Users provide their Solana wallet address to participate in airdrops.</p>
+                                <div class="wallet-example">
+                                    <strong>Example wallet address:</strong>
+                                    <div class="code-block">
+                                        <pre><code>9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="security-note">
+                        <div class="note-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="note-content">
+                            <h4>🔒 Security & Privacy</h4>
+                            <p>MochiDrop only stores public wallet addresses. Private keys are never requested or stored. All user data is encrypted and securely managed in our PostgreSQL database.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Wallet Setup Section -->
+                <section id="wallet-setup" class="content-section">
+                    <h1>💼 Wallet Setup</h1>
+                    <p class="section-subtitle">Complete guide to setting up and managing your Solana wallet</p>
+
+                    <div class="wallet-guide">
+                        <div class="guide-section">
+                            <h2>📱 Recommended Wallets</h2>
+                            <div class="wallet-options">
+                                <div class="wallet-option">
+                                    <div class="wallet-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="wallet-info">
+                                        <h4>Phantom Wallet</h4>
+                                        <p>Most popular Solana wallet with excellent mobile and browser support.</p>
+                                        <a href="https://phantom.app" class="wallet-link" target="_blank">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            Download Phantom
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="wallet-option">
+                                    <div class="wallet-icon">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <div class="wallet-info">
+                                        <h4>Solflare Wallet</h4>
+                                        <p>Feature-rich wallet with advanced portfolio management tools.</p>
+                                        <a href="https://solflare.com" class="wallet-link" target="_blank">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            Download Solflare
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="wallet-option">
+                                    <div class="wallet-icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div class="wallet-info">
+                                        <h4>Sollet Wallet</h4>
+                                        <p>Web-based wallet perfect for quick access and trading.</p>
+                                        <a href="https://www.sollet.io" class="wallet-link" target="_blank">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            Access Sollet
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-section">
+                            <h2>🔍 Finding Your Wallet Address</h2>
+                            <div class="address-steps">
+                                <div class="address-step">
+                                    <span class="step-num">1</span>
+                                    <p>Open your Solana wallet application</p>
+                                </div>
+                                <div class="address-step">
+                                    <span class="step-num">2</span>
+                                    <p>Look for "Receive" or "Deposit" button</p>
+                                </div>
+                                <div class="address-step">
+                                    <span class="step-num">3</span>
+                                    <p>Copy your public wallet address (starts with letters/numbers)</p>
+                                </div>
+                                <div class="address-step">
+                                    <span class="step-num">4</span>
+                                    <p>Paste the address in MochiDrop bot</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-section">
+                            <h2>⚠️ Important Notes</h2>
+                            <div class="warning-box">
+                                <div class="warning-item">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p><strong>Never share your private key or seed phrase</strong> - MochiDrop only needs your public address</p>
+                                </div>
+                                <div class="warning-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <p><strong>Double-check your address</strong> - Incorrect addresses will prevent you from receiving tokens</p>
+                                </div>
+                                <div class="warning-item">
+                                    <i class="fas fa-sync-alt"></i>
+                                    <p><strong>You can update your wallet</strong> - Use <code>/updatewallet</code> to change your registered address</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Claiming Airdrops Section -->
+                <section id="claiming-airdrops" class="content-section">
+                    <h1>🎁 Claiming Airdrops</h1>
+                    <p class="section-subtitle">Step-by-step guide to browsing and claiming available airdrops</p>
+
+                    <div class="claiming-process">
+                        <div class="process-step">
+                            <div class="process-header">
+                                <div class="process-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h3>Browse Available Airdrops</h3>
+                            </div>
+                            <div class="process-content">
+                                <p>Use the <code>/airdrops</code> command or click "🎯 Browse Airdrops" to see all available token distributions.</p>
+                                <div class="airdrop-example">
+                                    <div class="airdrop-card-example">
+                                        <div class="airdrop-header">
+                                            <h4>🚀 SolanaToken Airdrop</h4>
+                                            <span class="status-badge active">Active</span>
+                                        </div>
+                                        <div class="airdrop-details">
+                                            <p><strong>Amount:</strong> 100 SOLT per user</p>
+                                            <p><strong>Remaining:</strong> 5,000 / 10,000 tokens</p>
+                                            <p><strong>Ends:</strong> Dec 31, 2024</p>
+                                        </div>
+                                        <button class="claim-button-example">🎁 Claim Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="process-header">
+                                <div class="process-icon">
+                                    <i class="fas fa-mouse-pointer"></i>
+                                </div>
+                                <h3>One-Click Claiming</h3>
+                            </div>
+                            <div class="process-content">
+                                <p>Simply click the "🎁 Claim" button next to any available airdrop. The system will:</p>
+                                <ul class="claim-features">
+                                    <li>✅ Verify your eligibility</li>
+                                    <li>✅ Check if you haven't claimed before</li>
+                                    <li>✅ Automatically send tokens to your wallet</li>
+                                    <li>✅ Record the transaction for tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="process-header">
+                                <div class="process-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3>Instant Confirmation</h3>
+                            </div>
+                            <div class="process-content">
+                                <p>After claiming, you'll receive immediate confirmation with transaction details:</p>
+                                <div class="confirmation-example">
+                                    <div class="success-message">
+                                        <i class="fas fa-check-circle"></i>
+                                        <div class="message-content">
+                                            <h4>🎉 Airdrop Claimed Successfully!</h4>
+                                            <p><strong>Amount:</strong> 100 SOLT</p>
+                                            <p><strong>Transaction:</strong> 5KJh7...9mNx</p>
+                                            <p><strong>Status:</strong> Confirmed ✅</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="claiming-tips">
+                        <h2>💡 Pro Tips</h2>
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <i class="fas fa-clock"></i>
+                                <h4>Act Fast</h4>
+                                <p>Popular airdrops can run out quickly. Claim as soon as you see them!</p>
+                            </div>
+                            <div class="tip-card">
+                                <i class="fas fa-history"></i>
+                                <h4>Track Claims</h4>
+                                <p>Use <code>/myclaims</code> to view all your claimed airdrops and their status.</p>
+                            </div>
+                            <div class="tip-card">
+                                <i class="fas fa-bell"></i>
+                                <h4>Stay Updated</h4>
+                                <p>Follow the bot announcements for new airdrop notifications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- User Commands Section -->
+                <section id="user-commands" class="content-section">
+                    <h1>⌨️ User Commands</h1>
+                    <p class="section-subtitle">Complete reference of all available user commands</p>
+
+                    <div class="commands-grid">
+                        <div class="command-category">
+                            <h2>🚀 Getting Started</h2>
+                            <div class="command-list">
+                                <div class="command-item">
+                                    <div class="command-syntax">
+                                        <code>/start</code>
+                                    </div>
+                                    <div class="command-description">
+                                        <p>Initialize the bot and register your account. Shows welcome message with cute mochi character!</p>
+                                    </div>
+                                </div>
+
+                                <div class="command-item">
+                                    <div class="command-syntax">
+                                        <code>/help</code>
+                                    </div>
+                                    <div class="command-description">
+                                        <p>Display help information and available commands for your role.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="command-category">
+                            <h2>🎯 Airdrop Commands</h2>
+                            <div class="command-list">
+                                <div class="command-item">
+                                    <div class="command-syntax">
+                                        <code>/airdrops</code>
+                                    </div>
+                                    <div class="command-description">
+                                        <p>Browse all available airdrops with claim buttons and detailed information.</p>
+                                    </div>
+                                </div>
+
+                                <div class="command-item">
+                                    <div class="command-syntax">
+                                        <code>/myclaims</code>
+                                    </div>
+                                    <div class="command-description">
+                                        <p>View your complete claim history with transaction status and amounts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="command-category">
+                            <h2>💼 Wallet Management</h2>
+                            <div class="command-list">
+                                <div class="command-item">
+                                    <div class="command-syntax">
+                                        <code>/mywallet</code>
+                                    </div>
+                                    <div class="command-description">
+                                        <p>View your registered wallet address and account information.</p>
+                                    </div>
+                                </div>
+
+                                <div class="command-item">
+                                    <div class="command-syntax">
+                                        <code>/updatewallet</code>
+                                    </div>
+                                    <div class="command-description">
+                                        <p>Update your registered Solana wallet address with validation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="command-examples">
+                        <h2>📝 Usage Examples</h2>
+                        <div class="example-conversation">
+                            <div class="chat-message user">
+                                <div class="message-content">/airdrops</div>
+                            </div>
+                            <div class="chat-message bot">
+                                <div class="message-content">
+                                    <strong>🎯 Available Airdrops</strong><br>
+                                    📦 <strong>SolanaToken</strong> - 100 SOLT<br>
+                                    Status: Active | Remaining: 5,000<br>
+                                    [🎁 Claim] [ℹ️ Details]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Admin Setup Section -->
+                <section id="admin-setup" class="content-section">
+                    <h1>👑 Admin Setup</h1>
+                    <p class="section-subtitle">Configure admin access and permissions</p>
+
+                    <div class="admin-config">
+                        <div class="config-step">
+                            <h3>1. Environment Configuration</h3>
+                            <p>Add admin Telegram IDs to your <code>.env</code> file:</p>
+                            <div class="code-block">
+                                <pre><code># Admin Configuration
+ADMIN_TELEGRAM_IDS=123456789,987654321
+ADMIN_PASSWORD=your_secure_password_here</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="config-step">
+                            <h3>2. Admin Authentication</h3>
+                            <p>Admins must authenticate using the <code>/admin</code> command:</p>
+                            <div class="auth-flow">
+                                <div class="auth-step">
+                                    <span class="auth-num">1</span>
+                                    <p>Send <code>/admin</code> to the bot</p>
+                                </div>
+                                <div class="auth-step">
+                                    <span class="auth-num">2</span>
+                                    <p>Enter the admin password when prompted</p>
+                                </div>
+                                <div class="auth-step">
+                                    <span class="auth-num">3</span>
+                                    <p>Access granted - admin dashboard appears</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="config-step">
+                            <h3>3. Security Features</h3>
+                            <div class="security-features">
+                                <div class="security-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <div>
+                                        <h4>Role-Based Access</h4>
+                                        <p>Only authorized Telegram IDs can access admin functions</p>
+                                    </div>
+                                </div>
+                                <div class="security-item">
+                                    <i class="fas fa-key"></i>
+                                    <div>
+                                        <h4>Password Protection</h4>
+                                        <p>Additional password layer for admin authentication</p>
+                                    </div>
+                                </div>
+                                <div class="security-item">
+                                    <i class="fas fa-lock"></i>
+                                    <div>
+                                        <h4>Encrypted Storage</h4>
+                                        <p>All admin wallet private keys are encrypted at rest</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Creating Airdrops Section -->
+                <section id="creating-airdrops" class="content-section">
+                    <h1>🎁 Creating Airdrops</h1>
+                    <p class="section-subtitle">Step-by-step guide to creating and managing airdrops</p>
+
+                    <div class="airdrop-creation">
+                        <div class="creation-flow">
+                            <div class="flow-item">
+                                <div class="flow-number">1</div>
+                                <div class="flow-content">
+                                    <h3>Start Creation Process</h3>
+                                    <p>Use <code>/createairdrop</code> command to begin the multi-step creation process.</p>
+                                </div>
+                            </div>
+
+                            <div class="flow-item">
+                                <div class="flow-number">2</div>
+                                <div class="flow-content">
+                                    <h3>Airdrop Details</h3>
+                                    <p>Provide basic information about your airdrop:</p>
+                                    <ul class="detail-list">
+                                        <li>📝 Airdrop name and description</li>
+                                        <li>🪙 Token contract address</li>
+                                        <li>💰 Amount per user</li>
+                                        <li>👥 Maximum number of participants</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="flow-item">
+                                <div class="flow-number">3</div>
+                                <div class="flow-content">
+                                    <h3>Funding & Activation</h3>
+                                    <p>Fund the airdrop and set it live:</p>
+                                    <ul class="detail-list">
+                                        <li>💸 Transfer tokens to distribution wallet</li>
+                                        <li>⏰ Set start and end dates</li>
+                                        <li>✅ Activate for public claiming</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="airdrop-example">
+                            <h3>📋 Example Airdrop Configuration</h3>
+                            <div class="config-example">
+                                <div class="config-field">
+                                    <label>Name:</label>
+                                    <span>SolanaToken Community Airdrop</span>
+                                </div>
+                                <div class="config-field">
+                                    <label>Description:</label>
+                                    <span>Celebrating our community with 100 SOLT tokens per user!</span>
+                                </div>
+                                <div class="config-field">
+                                    <label>Token Address:</label>
+                                    <span>So11111111111111111111111111111111111111112</span>
+                                </div>
+                                <div class="config-field">
+                                    <label>Amount per User:</label>
+                                    <span>100 SOLT</span>
+                                </div>
+                                <div class="config-field">
+                                    <label>Max Participants:</label>
+                                    <span>1,000 users</span>
+                                </div>
+                                <div class="config-field">
+                                    <label>Total Budget:</label>
+                                    <span>100,000 SOLT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Admin Commands Section -->
+                <section id="admin-commands" class="content-section">
+                    <h1>👑 Admin Commands</h1>
+                    <p class="section-subtitle">Complete reference for administrative functions</p>
+
+                    <div class="admin-commands-grid">
+                        <div class="admin-command-category">
+                            <h2>🔐 Authentication</h2>
+                            <div class="admin-command-list">
+                                <div class="admin-command-item">
+                                    <div class="admin-command-syntax">
+                                        <code>/admin</code>
+                                    </div>
+                                    <div class="admin-command-description">
+                                        <p>Authenticate as admin and access the admin dashboard with all management tools.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="admin-command-category">
+                            <h2>🎁 Airdrop Management</h2>
+                            <div class="admin-command-list">
+                                <div class="admin-command-item">
+                                    <div class="admin-command-syntax">
+                                        <code>/createairdrop</code>
+                                    </div>
+                                    <div class="admin-command-description">
+                                        <p>Start the multi-step airdrop creation process with guided setup.</p>
+                                    </div>
+                                </div>
+
+                                <div class="admin-command-item">
+                                    <div class="admin-command-syntax">
+                                        <code>/manageairdrops</code>
+                                    </div>
+                                    <div class="admin-command-description">
+                                        <p>View and manage all existing airdrops - pause, resume, or modify settings.</p>
+                                    </div>
+                                </div>
+
+                                <div class="admin-command-item">
+                                    <div class="admin-command-syntax">
+                                        <code>/airdropstats</code>
+                                    </div>
+                                    <div class="admin-command-description">
+                                        <p>View detailed statistics for all airdrops including claim rates and distribution analytics.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="admin-command-category">
+                            <h2>💼 Wallet Management</h2>
+                            <div class="admin-command-list">
+                                <div class="admin-command-item">
+                                    <div class="admin-command-syntax">
+                                        <code>/adminwallet</code>
+                                    </div>
+                                    <div class="admin-command-description">
+                                        <p>Manage admin wallets - view balances, generate new wallets, and handle distributions.</p>
+                                    </div>
+                                </div>
+
+                                <div class="admin-command-item">
+                                    <div class="admin-command-syntax">
+                                        <code>/sendtokens</code>
+                                    </div>
+                                    <div class="admin-command-description">
+                                        <p>Manually send tokens to specific users or addresses with transaction tracking.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="admin-command-category">
+                            <h2>👥 User Management</h2>
+                            <div class="admin-command-list">
+                                <div class="admin-command-item">
+                                    <div class="admin-command-syntax">
+                                        <code>/users</code>
+                                    </div>
+                                    <div class="admin-command-description">
+                                        <p>View registered users, their wallet addresses, and claim history.</p>
+                                    </div>
+                                </div>
+
+                                <div class="admin-command-item">
+                                    <div class="admin-command-syntax">
+                                        <code>/botstats</code>
+                                    </div>
+                                    <div class="admin-command-description">
+                                        <p>Comprehensive bot statistics including user count, total distributions, and system health.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
