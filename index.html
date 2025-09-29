@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MochiDrop - Advanced Solana Airdrop Bot</title>
+    <meta name="description" content="MochiDrop is a comprehensive Solana-based airdrop management platform that allows developers to create, manage, and distribute token airdrops through Telegram bots.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍡</text></svg>">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🍡</span>
+                <span class="logo-text">MochiDrop</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#docs" class="nav-link">Docs</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="#demo" class="btn btn-outline">Try Demo</a>
+                <a href="#get-started" class="btn btn-primary">Get Started</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-mochi">🍡</div>
+            <div class="floating-coins">
+                <div class="coin">💰</div>
+                <div class="coin">🪙</div>
+                <div class="coin">💎</div>
+                <div class="coin">⭐</div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Advanced Solana
+                        <span class="gradient-text">Airdrop Bot</span>
+                        for Everyone
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        MochiDrop is a comprehensive platform that allows developers to create, manage, and distribute token airdrops through Telegram bots. Built for the Solana ecosystem with enterprise-grade security and scalability.
+                    </p>
+                    
+                    <div class="hero-features">
+                        <div class="feature-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure & Encrypted</span>
+                        </div>
+                        <div class="feature-badge">
+                            <i class="fas fa-rocket"></i>
+                            <span>Easy to Deploy</span>
+                        </div>
+                        <div class="feature-badge">
+                            <i class="fas fa-users"></i>
+                            <span>Multi-Tenant</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn btn-primary btn-large">
+                            <i class="fas fa-play"></i>
+                            Get Started Free
+                        </a>
+                        <a href="#demo" class="btn btn-outline btn-large">
+                            <i class="fas fa-eye"></i>
+                            View Demo
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Airdrops Created</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Users Served</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">99.9%</div>
+                            <div class="stat-label">Uptime</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="bot-preview">
+                        <div class="phone-mockup">
+                            <div class="phone-screen">
+                                <div class="telegram-header">
+                                    <div class="bot-avatar">🍡</div>
+                                    <div class="bot-info">
+                                        <div class="bot-name">MochiDrop Bot</div>
+                                        <div class="bot-status">online</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chat-messages">
+                                    <div class="message bot-message">
+                                        <div class="message-content">
+                                            🍡 Welcome to MochiDrop!<br>
+                                            Ready to claim some free tokens?
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="message user-message">
+                                        <div class="message-content">/start</div>
+                                    </div>
+                                    
+                                    <div class="message bot-message">
+                                        <div class="message-content">
+                                            🎯 Available Airdrops:<br>
+                                            • DeFi Token - 100 DEFI<br>
+                                            • Gaming Coin - 50 GAME<br>
+                                            • NFT Rewards - 25 NFT
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">
+                    Everything you need to run successful airdrop campaigns on Solana
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature-title">Telegram Bot Integration</h3>
+                    <p class="feature-description">
+                        Seamless Telegram bot with role-based access control, automated distribution, and comprehensive tracking capabilities.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Easy user registration</li>
+                        <li>One-click claims</li>
+                        <li>Real-time notifications</li>
+                        <li>Multi-language support</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="feature-title">Solana Integration</h3>
+                    <p class="feature-description">
+                        Native Solana blockchain integration with support for SPL tokens, automated transactions, and real-time balance tracking.
+                    </p>
+                    <ul class="feature-list">
+                        <li>SPL token support</li>
+                        <li>Automated transfers</li>
+                        <li>Transaction monitoring</li>
+                        <li>Fee optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Enterprise Security</h3>
+                    <p class="feature-description">
+                        Bank-grade security with encrypted wallet management, secure transactions, and comprehensive audit logging.
+                    </p>
+                    <ul class="feature-list">
+                        <li>AES-256 encryption</li>
+                        <li>Multi-signature support</li>
+                        <li>Audit trails</li>
+                        <li>Rate limiting</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Advanced Analytics</h3>
+                    <p class="feature-description">
+                        Comprehensive analytics dashboard with real-time metrics, user insights, and campaign performance tracking.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Real-time metrics</li>
+                        <li>User analytics</li>
+                        <li>Campaign tracking</li>
+                        <li>Export capabilities</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Multi-Tenant Platform</h3>
+                    <p class="feature-description">
+                        Support multiple projects and organizations with isolated data, custom branding, and flexible configurations.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Project isolation</li>
+                        <li>Custom branding</li>
+                        <li>Role management</li>
+                        <li>API access</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="feature-title">Cloud & Self-Hosted</h3>
+                    <p class="feature-description">
+                        Choose between our managed cloud service or deploy on your own infrastructure with Docker support.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Cloud hosting</li>
+                        <li>Self-hosted option</li>
+                        <li>Docker support</li>
+                        <li>Auto-scaling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">
+                    Get your airdrop campaign running in minutes
+                </p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Create Your Project</h3>
+                        <p class="step-description">
+                            Register your project on our platform or deploy your own instance. Configure your token details, distribution rules, and campaign parameters.
+                        </p>
+                        <div class="step-features">
+                            <span class="step-feature">Project setup</span>
+                            <span class="step-feature">Token configuration</span>
+                            <span class="step-feature">Distribution rules</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Configure Your Bot</h3>
+                        <p class="step-description">
+                            Set up your Telegram bot with custom commands, messages, and requirements. Define tasks, social media verification, and eligibility criteria.
+                        </p>
+                        <div class="step-features">
+                            <span class="step-feature">Bot customization</span>
+                            <span class="step-feature">Task configuration</span>
+                            <span class="step-feature">Verification rules</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Launch Your Campaign</h3>
+                        <p class="step-description">
+                            Fund your distribution wallet and launch your airdrop campaign. Share your bot with your community and start distributing tokens automatically.
+                        </p>
+                        <div class="step-features">
+                            <span class="step-feature">Wallet funding</span>
+                            <span class="step-feature">Campaign launch</span>
+                            <span class="step-feature">Community sharing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Monitor & Analyze</h3>
+                        <p class="step-description">
+                            Track your campaign performance with real-time analytics. Monitor user engagement, distribution metrics, and optimize your strategy.
+                        </p>
+                        <div class="step-features">
+                            <span class="step-feature">Real-time tracking</span>
+                            <span class="step-feature">Performance metrics</span>
+                            <span class="step-feature">Strategy optimization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-subtitle">
+                    Choose the plan that fits your needs
+                </p>
+            </div>
+            
+            <div class="pricing-toggle">
+                <span class="toggle-label">Monthly</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Annual <span class="discount">Save 20%</span></span>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Free</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-description">Perfect for testing and small campaigns</p>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Up to 3 projects</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>1,000 API calls/month</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Basic analytics</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Community support</span>
+                        </div>
+                        <div class="feature-item disabled">
+                            <i class="fas fa-times"></i>
+                            <span>Custom branding</span>
+                        </div>
+                        <div class="feature-item disabled">
+                            <i class="fas fa-times"></i>
+                            <span>Priority support</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-action">
+                        <a href="#get-started" class="btn btn-outline btn-full">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount monthly-price">$29</span>
+                            <span class="price-amount annual-price">$23</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-description">For growing projects and businesses</p>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Unlimited projects</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>100,000 API calls/month</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced analytics</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Priority support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Custom branding</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Webhook integration</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-action">
+                        <a href="#get-started" class="btn btn-primary btn-full">Start Pro Trial</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">Custom</span>
+                        </div>
+                        <p class="pricing-description">For large organizations and custom needs</p>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Everything in Pro</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Unlimited API calls</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Dedicated support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>SLA guarantees</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Custom integrations</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>On-premise deployment</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-action">
+                        <a href="#contact" class="btn btn-outline btn-full">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Try MochiDrop Now</h2>
+                <p class="section-subtitle">
+                    Experience the power of automated airdrops
+                </p>
+            </div>
+            
+            <div class="demo-container">
+                <div class="demo-content">
+                    <div class="demo-info">
+                        <h3>Interactive Demo</h3>
+                        <p>
+                            Try our live demo bot to see how MochiDrop works. Connect your wallet, complete tasks, and claim test tokens on Solana devnet.
+                        </p>
+                        
+                        <div class="demo-features">
+                            <div class="demo-feature">
+                                <i class="fas fa-wallet"></i>
+                                <span>Connect Solana Wallet</span>
+                            </div>
+                            <div class="demo-feature">
+                                <i class="fas fa-tasks"></i>
+                                <span>Complete Tasks</span>
+                            </div>
+                            <div class="demo-feature">
+                                <i class="fas fa-coins"></i>
+                                <span>Claim Test Tokens</span>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-actions">
+                            <a href="https://t.me/MochiDropDemoBot" target="_blank" class="btn btn-primary">
+                                <i class="fab fa-telegram"></i>
+                                Try Demo Bot
+                            </a>
+                            <a href="#docs" class="btn btn-outline">
+                                <i class="fas fa-book"></i>
+                                View Documentation
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-visual">
+                        <div class="demo-screen">
+                            <div class="demo-header">
+                                <div class="demo-title">MochiDrop Demo</div>
+                                <div class="demo-status">
+                                    <span class="status-dot"></span>
+                                    Live Demo
+                                </div>
+                            </div>
+                            
+                            <div class="demo-body">
+                                <div class="demo-step active">
+                                    <div class="step-icon">🍡</div>
+                                    <div class="step-text">Welcome to MochiDrop!</div>
+                                </div>
+                                
+                                <div class="demo-step">
+                                    <div class="step-icon">💼</div>
+                                    <div class="step-text">Connect your wallet</div>
+                                </div>
+                                
+                                <div class="demo-step">
+                                    <div class="step-icon">✅</div>
+                                    <div class="step-text">Complete verification tasks</div>
+                                </div>
+                                
+                                <div class="demo-step">
+                                    <div class="step-icon">🎁</div>
+                                    <div class="step-text">Claim your tokens!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="docs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Documentation & Resources</h2>
+                <p class="section-subtitle">
+                    Everything you need to get started with MochiDrop
+                </p>
+            </div>
+            
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="doc-title">Quick Start Guide</h3>
+                    <p class="doc-description">
+                        Get up and running with MochiDrop in under 10 minutes. Step-by-step instructions for your first airdrop campaign.
+                    </p>
+                    <a href="docs/INSTALLATION.html" class="doc-link">
+                        Read Guide <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="doc-title">API Reference</h3>
+                    <p class="doc-description">
+                        Complete API documentation with examples, authentication, and integration guides for developers.
+                    </p>
+                    <a href="docs/API_REFERENCE.html" class="doc-link">
+                        View API Docs <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 class="doc-title">Configuration</h3>
+                    <p class="doc-description">
+                        Detailed configuration options, environment variables, and deployment settings for all scenarios.
+                    </p>
+                    <a href="docs/CONFIGURATION.html" class="doc-link">
+                        Configuration Guide <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="doc-title">Security Best Practices</h3>
+                    <p class="doc-description">
+                        Learn about wallet security, private key management, and best practices for production deployments.
+                    </p>
+                    <a href="docs/WALLET_MANAGEMENT.html" class="doc-link">
+                        Security Guide <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="doc-title">Integration Examples</h3>
+                    <p class="doc-description">
+                        Real-world examples of integrating MochiDrop with React, Discord bots, and other platforms.
+                    </p>
+                    <a href="docs/INTEGRATION_EXAMPLES.html" class="doc-link">
+                        View Examples <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3 class="doc-title">FAQ & Troubleshooting</h3>
+                    <p class="doc-description">
+                        Common questions, troubleshooting guides, and solutions to frequently encountered issues.
+                    </p>
+                    <a href="docs/FAQ.html" class="doc-link">
+                        Get Help <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section id="get-started" class="get-started">
+        <div class="container">
+            <div class="get-started-content">
+                <div class="get-started-text">
+                    <h2 class="section-title">Ready to Launch Your Airdrop?</h2>
+                    <p class="section-subtitle">
+                        Join thousands of projects using MochiDrop to distribute tokens and grow their communities.
+                    </p>
+                    
+                    <div class="get-started-options">
+                        <div class="option">
+                            <div class="option-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="option-content">
+                                <h3>Cloud Platform</h3>
+                                <p>Use our managed service with no setup required</p>
+                            </div>
+                        </div>
+                        
+                        <div class="option">
+                            <div class="option-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="option-content">
+                                <h3>Self-Hosted</h3>
+                                <p>Deploy on your own infrastructure with full control</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="get-started-actions">
+                        <a href="https://dashboard.mochidrop.com/register" class="btn btn-primary btn-large">
+                            <i class="fas fa-user-plus"></i>
+                            Create Free Account
+                        </a>
+                        <a href="https://github.com/dreyxd/MochiDrop" target="_blank" class="btn btn-outline btn-large">
+                            <i class="fab fa-github"></i>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="get-started-visual">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <div class="terminal-title">MochiDrop Setup</div>
+                        </div>
+                        
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">git clone https://github.com/dreyxd/MochiDrop.git</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">cd MochiDrop</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">docker-compose up -d</span>
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="success">✅ MochiDrop is running on http://localhost:8000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">
+                    Have questions? We're here to help you succeed with your airdrop campaigns.
+                </p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h3>Telegram Community</h3>
+                            <p>Join our community for support and updates</p>
+                            <a href="https://t.me/mochidrop_community" target="_blank">@mochidrop_community</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h3>Discord Server</h3>
+                            <p>Chat with developers and get real-time help</p>
+                            <a href="https://discord.gg/mochidrop" target="_blank">discord.gg/mochidrop</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h3>GitHub Repository</h3>
+                            <p>Report issues and contribute to the project</p>
+                            <a href="https://github.com/dreyxd/MochiDrop" target="_blank">github.com/dreyxd/MochiDrop</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h3>Email Support</h3>
+                            <p>For business inquiries and enterprise support</p>
+                            <a href="mailto:support@mochidrop.com">support@mochidrop.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form class="form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="enterprise">Enterprise Sales</option>
+                                <option value="partnership">Partnership</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🍡</span>
+                        <span class="logo-text">MochiDrop</span>
+                    </div>
+                    <p class="footer-description">
+                        Advanced Solana airdrop management platform for developers and organizations. Built with security, scalability, and ease of use in mind.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://twitter.com/mochidrop" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/dreyxd/MochiDrop" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://t.me/mochidrop_community" target="_blank" class="social-link">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://discord.gg/mochidrop" target="_blank" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Product</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="docs/">Documentation</a></li>
+                        <li><a href="https://github.com/dreyxd/MochiDrop/releases">Changelog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="docs/INSTALLATION.html">Installation Guide</a></li>
+                        <li><a href="docs/API_REFERENCE.html">API Reference</a></li>
+                        <li><a href="docs/INTEGRATION_EXAMPLES.html">Examples</a></li>
+                        <li><a href="docs/FAQ.html">FAQ</a></li>
+                        <li><a href="docs/TROUBLESHOOTING.html">Troubleshooting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/security">Security</a></li>
+                        <li><a href="/status">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 MochiDrop. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                    <a href="/security">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
